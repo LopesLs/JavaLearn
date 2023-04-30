@@ -5,9 +5,7 @@ package files.ExercisesCode;
 import java.util.Scanner;
 
 public class Apple {
-  public static void main(String[] args) {
-    @SuppressWarnings("resource") // Remove o aviso de que o objeto Scanner não foi fechado
-    Scanner input = new Scanner(System.in); // Cria o objeto Scanner
+  public static void main(String[] args, Scanner scanner) {
 
     // Introduzindo o programa para o usuário
     System.out.println("\nApple.java");
@@ -15,7 +13,7 @@ public class Apple {
 
     // Pede a quantidade de maçãs
     System.out.print("\nQuantas maçãs você deseja comprar? ");
-    int apples = input.nextInt();
+    int apples = scanner.nextInt();
 
     // Verifica a quantidade de maçãs e aplica o desconto
     if (apples < 12) {
@@ -25,8 +23,5 @@ public class Apple {
       System.out.println("\nNota: Você está comprando pelo menos uma dúzia, a unidade custará R$0,25");
       System.out.printf("O preço que você vai pagar pelas %d maçãs é: R$%.2f\n", apples, (apples * 0.25));
     }
-
-    // Remova o comentário caso esteja executando o próprio código
-    //input.close(); // Fecha o objeto Scanner
   }
 }

@@ -2,22 +2,20 @@ package files.AulasCode;
 import java.util.Scanner; // Importa a classe Scanner
 
 public class ExemploInput {
-  public static void main(String[] args) {
-    @SuppressWarnings("resource") // Suprime o aviso de que o objeto Scanner não foi fechado
-    Scanner entrada = new Scanner(System.in); // Cria um objeto Scanner
 
+  public static void main(String[] args, Scanner scanner) {
     System.out.println("\nExemploInput.java");
 
     System.out.print("\nDigite o primeiro número: "); // Exibe a mensagem
-    int valor1 = entrada.nextInt(); // Lê um número inteiro
+    int valor1 = scanner.nextInt(); // Lê um número inteiro
 
     System.out.print("Digite o segundo número: ");
-    int valor2 = entrada.nextInt();
+    int valor2 = scanner.nextInt();
 
     System.out.printf("A soma entre %d e %d é = %d\n", valor1, valor2, (valor1 + valor2)); // Exibe a soma
 
     System.out.print("Digite o dia da semana: ");
-    int dia = entrada.nextInt();
+    int dia = scanner.nextInt();
 
     // Remova o comentário caso esteja executando o própio código
     // entrada.close(); // Fecha o objeto Scanner

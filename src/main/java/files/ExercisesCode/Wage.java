@@ -1,21 +1,18 @@
-package files.ExercisesCode;
-
 // Descrição: Escreva um programa que leia o salário bruto de um funcionário e mostre o valor líquido. Se o salário for menor que R$ 1.000 o desconto é 6% Até R$ 2.500 é 8% Até R$ 4.800 é 10% Maior que 4.800 é 15%
 
+package files.ExercisesCode;
 import java.util.Scanner;
 
 public class Wage {
-  public static void main(String[] args) {
-    @SuppressWarnings("resource") // Remove o aviso de que o objeto Scanner não foi fechado
-    Scanner input = new Scanner(System.in); // Cria o objeto Scanner
+  public static void main(String[] args, Scanner scanner) {
 
     // Introduzindo o programa para o usuário
-    System.out.println("\nWage.java");
+    System.out.println("\n> Wage.java");
     System.out.println("Este programa lê o salário bruto de um funcionário e mostra o valor líquido.");
 
     // Pede o salário bruto
     System.out.print("\nDigite o salário bruto: ");
-    double wage = input.nextDouble();
+    double wage = scanner.nextDouble();
     double liquidWage = 0;
 
     // Verifica o salário e aplica o desconto
@@ -35,8 +32,5 @@ public class Wage {
 
     // Mostra o salário líquido
     System.out.printf("Salário líquido: R$%.2f\n", liquidWage);
-
-    // Remova o comentário caso esteja executando o próprio código
-    // input.close(); // Fecha o objeto Scanner
   }
 }

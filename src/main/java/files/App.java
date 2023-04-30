@@ -26,7 +26,7 @@ public class App{
   
             switch (option - 1) {
               case 0:
-                ExemploInput.main(args);
+                ExemploInput.main(args, input);
                 break;
               
               case 1:
@@ -61,19 +61,23 @@ public class App{
   
           switch (option - 1) {
             case 0:
-              Apple.main(args);
+              Apple.main(args, input);
               break;
             
             case 1:
-              Wage.main(args);
+              Wage.main(args, input);
               break;
             
             case 2:
-              Biggestandsmallest.main(args);
+              Biggestandsmallest.main(args, input);
               break;
             
             case 3:
               AlunoApp.main(args);
+              break;
+            
+            case 4:
+              Imc.main(args, input);
               break;
           }
   
