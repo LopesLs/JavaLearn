@@ -5,7 +5,7 @@ public class PrimitivoVsObjeto {
   static Integer objeto;
   
   public static void main(String[] args) {
-    System.out.println("\nPrimitivoVsObjeto.java\n");
+    System.out.println("\n> PrimitivoVsObjeto.java\n");
     System.out.println(primitivo);
     System.out.println(objeto);
   }

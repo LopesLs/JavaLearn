@@ -9,7 +9,7 @@ public class AlunoApp {
     Aluno student2 = new Aluno("Maria", 100, 100, 100);
 
     // Introduzindo o programa para o usuário
-    System.out.println("\nAlunoApp.java");
+    System.out.println("\n> AlunoApp.java");
     System.out.println("Este programa calcula a média de um aluno e retorna seu nome e média.");
 
     // Imprimindo os dados dos alunos

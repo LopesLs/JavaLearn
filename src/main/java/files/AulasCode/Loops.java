@@ -4,7 +4,7 @@ public class Loops {
   public static void main(String[] args) {
     int x = 10; // Variável de controle
 
-    System.out.println("\nLoops.java");
+    System.out.println("\n> Loops.java");
 
     System.out.println("\n10 á 0 com while"); // 10 á 0 com while
     while (x > 0) {
