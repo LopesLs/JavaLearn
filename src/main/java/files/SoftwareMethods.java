@@ -2,7 +2,7 @@ package files;
 
 public class SoftwareMethods {
   String[] codeClassNames = {"ExemploInput.java", "Introduction.java", "Loops.java", "PrimitivoVsObjeto.java", "OrderApp.java"};
-  String[] codeExercisesNames = {"Apple.java", "Wage.java", "Biggestandsmallest.java", "AlunoApp.java"};
+  String[] codeExercisesNames = {"Apple.java", "Wage.java", "Biggestandsmallest.java", "AlunoApp.java", "Imc.java"};
   
   public void showStartMenu() {
     System.out.println("\n+-------------------------------------+");
