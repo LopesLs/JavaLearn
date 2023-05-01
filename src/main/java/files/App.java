@@ -1,8 +1,15 @@
 package files;
+import java.util.Scanner;
+
+// Importing files
 import files.AulasCode.*;
 import files.ExercisesCode.*;
 
-import java.util.Scanner;
+// Importing subdirectories
+import files.AulasCode.InputExample.ExemploInput;
+import files.AulasCode.Orders.OrderApp;
+import files.ExercisesCode.MediaAluno.AlunoApp;
+import files.AulasCode.Bank.BankAccountApp;
 
 public class App{
   public static void main(String[] args) {
@@ -43,6 +50,10 @@ public class App{
               
               case 4:
                 OrderApp.main(args);
+                break;
+              
+              case 5:
+                BankAccountApp.main(args);
                 break;
             }
   
@@ -94,7 +105,7 @@ public class App{
         break;
   
       default:
-        System.out.println("\nOpção inválida!\n");
+        System.out.println("\nOpção inválida!");
         break;
       }  
     }
