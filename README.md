@@ -35,7 +35,7 @@ mvn test-compile
 
 👤 **Carlos Lopes**
 
-* Linkedin: <a href="https://www.linkedin.com/in/lopeslsdev/" target="_blank">@theapache64</a>
+* Linkedin: <a href="https://www.linkedin.com/in/lopeslsdev/" target="_blank">@Carlos Lopes</a>
 * Email: lopes.carlos.host@gmail.com
 
 Feel free to ping me 😉
