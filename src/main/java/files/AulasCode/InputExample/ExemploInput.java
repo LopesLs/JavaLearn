@@ -1,10 +1,10 @@
-package files.AulasCode;
+package files.AulasCode.InputExample;
 import java.util.Scanner; // Importa a classe Scanner
 
 public class ExemploInput {
 
   public static void main(String[] args, Scanner scanner) {
-    System.out.println("\nExemploInput.java");
+    System.out.println("\n> ExemploInput.java");
 
     System.out.print("\nDigite o primeiro número: "); // Exibe a mensagem
     int valor1 = scanner.nextInt(); // Lê um número inteiro

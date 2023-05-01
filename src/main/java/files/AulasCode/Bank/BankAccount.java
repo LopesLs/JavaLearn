@@ -1,6 +1,6 @@
 // Description: Classe que simula uma conta bancária.
 
-package files.AulasCode;
+package files.AulasCode.Bank;
 
 public class BankAccount {
   private String client;

@@ -1,6 +1,6 @@
 // Descrição: Criar uma classe aluno que receba um nome, nota1, nota2 e nota3, onde o montante das notas podem chegar no máximo 100. Cria um método que retorne o nome do aluno, sua média, a maior e menor nota.
 
-package files.ExercisesCode;
+package files.ExercisesCode.MediaAluno;
 
 public class Aluno {
 

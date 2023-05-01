@@ -1,4 +1,4 @@
-package files.AulasCode;
+package files.AulasCode.Orders;
 
 public class Order {
 
