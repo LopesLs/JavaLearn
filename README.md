@@ -1,4 +1,4 @@
-![](cover.png)
+![](cover.jpg)
 
 # JavaLearn
 
