@@ -9,7 +9,7 @@ public class Introduction {
         boolean hireInfo = false;
         
         // Saída de dados
-        System.out.println("\nIntroduction.java");
+        System.out.println("\n> Introduction.java");
 
         System.out.printf("\nHello, my name is %s and I'm %d years old.\n", name, age); // %s = string e %d = int
         System.out.printf("I'm %.2f meters tall.\n", height); // %.2f = 2 casas     decimais
