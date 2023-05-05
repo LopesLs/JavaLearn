@@ -90,6 +90,12 @@ public class App{
             case 4:
               Imc.main(args, input);
               break;
+            case 5:
+              Worker.main(args);
+              break;
+            case 6:
+              Inheritance.main(args);
+              break;
           }
   
         } catch (Exception e) {
