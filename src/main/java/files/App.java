@@ -73,20 +73,16 @@ public class App{
           switch (option - 1) {
             case 0:
               Apple.main(args, input);
-              break;
-            
+              break;           
             case 1:
               Wage.main(args, input);
-              break;
-            
+              break;       
             case 2:
               Biggestandsmallest.main(args, input);
               break;
-            
             case 3:
               AlunoApp.main(args);
               break;
-            
             case 4:
               Imc.main(args, input);
               break;
@@ -95,6 +91,9 @@ public class App{
               break;
             case 6:
               Inheritance.main(args);
+              break;
+            case 7:
+              PlayerApp.main(args, input);
               break;
           }
   
