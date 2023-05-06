@@ -16,28 +16,28 @@ public class Player {
 
   public void setGol(HashMap<String, ArrayList<Integer>> players, Scanner scanner) {
     if (players.containsKey(this.nome)) {
-      System.out.print("Digite a quantidade de gols: ");
+      System.out.print("> Digite a quantidade de gols: ");
       int gols = scanner.nextInt();
 
       players.get(this.nome).set(0, gols);
-      System.out.printf("\nGols adicionados com sucesso!\n");
+      System.out.printf("\n!Aviso! Gols adicionados com sucesso.\n");
 
     } else {
-      System.out.printf("\nJogador %s não encontrado!\n", this.nome);
+      System.out.printf("!Aviso! Jogador %s não encontrado.\n", this.nome);
     }
     
   }
 
   public void setAssistence(HashMap<String, ArrayList<Integer>> players, Scanner scanner) {
     if (players.containsKey(this.nome)) {
-      System.out.print("Digite a quantidade de assistências: ");
+      System.out.print("> Digite a quantidade de assistências: ");
       int assistencias = scanner.nextInt();
 
       players.get(this.nome).set(1, assistencias);
-      System.out.printf("\nAssistências adicionadas com sucesso!\n");
+      System.out.printf("\n!Aviso! Assistências adicionadas com sucesso.\n");
 
     } else {
-      System.out.printf("\nJogador %s não encontrado!\n", this.nome);
+      System.out.printf("!Aviso! Jogador %s não encontrado.\n", this.nome);
     }
   }
 
@@ -46,7 +46,7 @@ public class Player {
       return String.format("Jogador: %s | Gols: %d", nome, players.get(nome).get(0));
 
     } else {
-      return String.format("\nJogador %s não encontrado!\n", nome);
+      return String.format("!Aviso! Jogador %s não encontrado.\n", nome);
     }
   }
 
@@ -55,7 +55,7 @@ public class Player {
       return String.format("Jogador: %s | Assistências: %d", nome, players.get(nome).get(1));
 
     } else {
-      return String.format("\nJogador %s não encontrado!\n", nome);
+      return String.format("!Aviso! Jogador %s não encontrado.\n", nome);
     } 
   }
 }

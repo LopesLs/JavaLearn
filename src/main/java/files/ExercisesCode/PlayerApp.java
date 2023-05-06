@@ -7,18 +7,15 @@ import java.util.ArrayList;
 
 
 public class PlayerApp {
-  public static void main(String[] args) {
+  public static void main(String[] args, Scanner scanner) {
     HashMap<String, ArrayList<Integer>> players = new HashMap<String, ArrayList<Integer>>();
     Player player = new Player(null, null);
-    Scanner scanner = new Scanner(System.in);
 
     // Introduzindo o programa para o usuário
     System.out.println("\n> Player.java");
     System.out.println("Este programa cria um jogador e adiciona gols e assistências a ele.");
 
     while (true) {
-      System.out.println(players);
-
       System.out.println("\nOpções:");
       System.out.println("1 - Criar jogador");
       System.out.println("2 - Adicionar gols");
@@ -27,18 +24,17 @@ public class PlayerApp {
       System.out.println("5 - Ver assistências");
       System.out.println("0 - Sair\n");
 
-      System.out.print("Digite a opção desejada: ");
+      System.out.print("> Digite a opção desejada: ");
       int option = scanner.nextInt();
 
       switch (option) {
         case 0:
           System.out.println("\nSaindo...");
-          scanner.close();
           System.exit(option);
           break;
 
         case 1:
-          System.out.print("\nDigite o nome do jogador: ");
+          System.out.print("\n> Digite o nome do jogador: ");
           player.nome = scanner.next();
 
           ArrayList<Integer> playerStatistics = new ArrayList<Integer>();        
@@ -48,11 +44,11 @@ public class PlayerApp {
           player.statistics = playerStatistics;
           players.put(player.nome, player.statistics);
   
-          System.out.printf("\nJogador %s criado com sucesso!\n", player.nome);
+          System.out.printf("\n!Aviso! Jogador %s criado com sucesso.\n", player.nome);
           break;
 
         case 2:
-          System.out.print("\nDigite o nome do jogador: ");
+          System.out.print("\n> Digite o nome do jogador: ");
           player.nome = scanner.next();
 
           player.setGol(players, scanner);
@@ -60,7 +56,7 @@ public class PlayerApp {
           break;
         
         case 3:
-          System.out.print("\nDigite o nome do jogador: ");
+          System.out.print("\n> Digite o nome do jogador: ");
           player.nome = scanner.next();
 
           player.setAssistence(players, scanner);
@@ -68,7 +64,7 @@ public class PlayerApp {
           break;
         
         case 4:
-          System.out.print("\nDigite o nome do jogador: ");
+          System.out.print("\n> Digite o nome do jogador: ");
           player.nome = scanner.next();
 
           System.out.printf("\n%s\n", player.getGols(players, player.nome));
@@ -76,7 +72,7 @@ public class PlayerApp {
           break;
         
         case 5:
-          System.out.print("\nDigite o nome do jogador: ");
+          System.out.print("\n> Digite o nome do jogador: ");
           player.nome = scanner.next();
 
           System.out.printf("\n%s\n", player.getAssistencia(players, player.nome));
