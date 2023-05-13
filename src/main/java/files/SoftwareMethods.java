@@ -4,9 +4,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SoftwareMethods {
+
+  public SoftwareMethods() {
+    subDirectoriesClass.put("AlunoApp.java", "MediaAluno/");
+    subDirectoriesClass.put("BankAccountApp.java", "Bank/");
+    subDirectoriesClass.put("ExemploInput.java", "InputExample/");
+    subDirectoriesClass.put("OrderApp.java", "Orders/");
+    subDirectoriesClass.put("Imc.java", "ImcApp/");
+  }
+
   ArrayList<String> codeClassNames = new ArrayList<String>(Arrays.asList("ExemploInput.java", "Introduction.java", "Loops.java", "PrimitivoVsObjeto.java", "OrderApp.java", "BankAccountApp.java"));
   ArrayList<String> codeExercisesNames = new ArrayList<String>(Arrays.asList("Apple.java", "Wage.java", "Biggestandsmallest.java", "AlunoApp.java", "ImcSoftware.java", "Worker.java", "Inheritance.java", "PlayerApp.java"));
-
   HashMap<String, String> subDirectoriesClass = new HashMap<>();
   
   public void showStartMenu() {
@@ -21,19 +29,19 @@ public class SoftwareMethods {
     System.out.print("\n> Digite o número da opção desejada: ");
   }
 
-  public void showCodesMenu(int menuType) {
-    if (menuType == 0) {
-      System.out.println("\n+-------------------------------------+");
-      System.out.println("|    Códigos feitos em sala de aula   |");
-      System.out.println("+-------------------------------------+");
-      for (int iterator = 0; iterator < this.codeClassNames.size(); iterator++) {
-        System.out.printf("| %d - %s \n", iterator + 1, this.codeClassNames.get(iterator));
-      }
-      System.out.print("| 0 - Voltar \n");
+  public void showCodesClassMenu() {
+    System.out.println("\n+-------------------------------------+");
+    System.out.println("|    Códigos feitos em sala de aula   |");
+    System.out.println("+-------------------------------------+");
+    for (int iterator = 0; iterator < this.codeClassNames.size(); iterator++) {
+      System.out.printf("| %d - %s \n", iterator + 1, this.codeClassNames.get(iterator));
+    }
+    System.out.print("| 0 - Voltar \n");
 
-      System.out.print("\n> Digite o número da opção desejada: ");
+    System.out.print("\n> Digite o número da opção desejada: ");
+  }
 
-    } else if (menuType == 1) {
+  public void showCodesExercisesMenu() {
       System.out.println("\n+-------------------------------------+");
       System.out.println("|   Códigos de exercícios propostos   |");
       System.out.println("|-------------------------------------|");
@@ -43,37 +51,30 @@ public class SoftwareMethods {
       System.out.print("| 0 - Voltar \n");
 
       System.out.print("\n> Digite o número da opção desejada: ");
-    }
   }
 
-  public void showCodeInformation(String codeName, int menuType) {
-    
+  public void showExerciseCodeInformation(String codeName) {
     String codeDirectory = codeName;
-    subDirectoriesClass.put("AlunoApp.java", "MediaAluno/");
-    subDirectoriesClass.put("BankAccountApp.java", "Bank/");
-    subDirectoriesClass.put("ExemploInput.java", "InputExample/");
-    subDirectoriesClass.put("OrderApp.java", "Orders/");
-    subDirectoriesClass.put("Imc.java", "ImcApp/");
 
     if (subDirectoriesClass.containsKey(codeName)) {
       codeDirectory = subDirectoriesClass.get(codeName) + codeName;
     }
 
-    switch (menuType) {
-      case 0:
-        System.out.println("\nInicializando " + codeName + " ...");
-        System.out.printf("Código fonte em: https://github.com/LopesLs/JavaLearn/blob/main/src/main/java/files/AulasCode/%s\n", codeDirectory);
-        break;
-      
-      case 1:
-        System.out.println("\nInicializando " + codeName + " ...");
-        System.out.printf("Código fonte em: https://github.com/LopesLs/JavaLearn/blob/main/src/main/java/files/ExercisesCode/%s\n", codeDirectory);
-        break;
-      
-      default:
-        System.out.println("\nOpção inválida!");
-        break;
+    System.out.println("\nInicializando " + codeName + " ...");
+    System.out.printf("Código fonte em: https://github.com/LopesLs/JavaLearn/blob/main/src/main/java/files/ExercisesCode/%s\n", codeDirectory);
+
+    subDirectoriesClass.clear();
+  }
+
+  public void showClassCodeInformation(String codeName) {
+    String codeDirectory = codeName;
+
+    if (subDirectoriesClass.containsKey(codeName)) {
+      codeDirectory = subDirectoriesClass.get(codeName) + codeName;
     }
+
+    System.out.println("\nInicializando " + codeName + " ...");
+    System.out.printf("Código fonte em: https://github.com/LopesLs/JavaLearn/blob/main/src/main/java/files/AulasCode/%s\n", codeDirectory);
 
     subDirectoriesClass.clear();
   }
