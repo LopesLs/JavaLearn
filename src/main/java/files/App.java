@@ -10,6 +10,7 @@ import files.AulasCode.InputExample.ExemploInput;
 import files.AulasCode.Orders.OrderApp;
 import files.ExercisesCode.MediaAluno.AlunoApp;
 import files.AulasCode.Bank.BankAccountApp;
+import files.ExercisesCode.ImcApp.ImcSoftware;
 
 public class App{
   public static void main(String[] args) {
@@ -27,32 +28,34 @@ public class App{
         case 1:
           methods.showCodesMenu(0);
           option = input.nextInt();
-  
+
           try {
-            methods.showCodeInformation(methods.codeClassNames[option - 1], 0);
-  
-            switch (option - 1) {
-              case 0:
+            if (option == 0) {break;} else {methods.showCodeInformation(methods.codeClassNames.get(option - 1), 0);}
+            
+            // Switch case to call the class that the user wants to see
+            switch (option) {
+              
+              case 1:
                 ExemploInput.main(args, input);
                 break;
               
-              case 1:
+              case 2:
                 Introduction.main(args);
                 break;
               
-              case 2:
+              case 3:
                 Loops.main(args);
                 break;
               
-              case 3:
+              case 4:
                 PrimitivoVsObjeto.main(args);
                 break;
               
-              case 4:
+              case 5:
                 OrderApp.main(args);
                 break;
               
-              case 5:
+              case 6:
                 BankAccountApp.main(args);
                 break;
             }
@@ -68,31 +71,32 @@ public class App{
         option = input.nextInt();
   
         try {
-          methods.showCodeInformation(methods.codeExercisesNames[option - 1], 1);
-  
-          switch (option - 1) {
-            case 0:
+          if (option == 0) {break;} else {methods.showCodeInformation(methods.codeExercisesNames.get(option-1), 1);}
+          
+          // Switch case to call the class that the user wants to see
+          switch (option) {
+            case 1:
               Apple.main(args, input);
               break;           
-            case 1:
+            case 2:
               Wage.main(args, input);
               break;       
-            case 2:
-              Biggestandsmallest.main(args, input);
-              break;
             case 3:
+              Biggestandsmallest.main(args, input);
+              break; 
+            case 4:
               AlunoApp.main(args);
               break;
-            case 4:
-              Imc.main(args, input);
-              break;
             case 5:
-              Worker.main(args);
+              ImcSoftware.main(args, input);
               break;
             case 6:
-              Inheritance.main(args);
+              Worker.main(args);
               break;
             case 7:
+              Inheritance.main(args);
+              break;
+            case 8:
               PlayerApp.main(args, input);
               break;
           }
