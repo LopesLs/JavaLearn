@@ -1,9 +1,11 @@
 package files;
 import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class SoftwareMethods {
-  String[] codeClassNames = {"ExemploInput.java", "Introduction.java", "Loops.java", "PrimitivoVsObjeto.java", "OrderApp.java", "BankAccountApp.java"};
-  String[] codeExercisesNames = {"Apple.java", "Wage.java", "Biggestandsmallest.java", "AlunoApp.java", "Imc.java", "Worker.java", "Inheritance.java", "PlayerApp.java"};
+  ArrayList<String> codeClassNames = new ArrayList<String>(Arrays.asList("ExemploInput.java", "Introduction.java", "Loops.java", "PrimitivoVsObjeto.java", "OrderApp.java", "BankAccountApp.java"));
+  ArrayList<String> codeExercisesNames = new ArrayList<String>(Arrays.asList("Apple.java", "Wage.java", "Biggestandsmallest.java", "AlunoApp.java", "ImcSoftware.java", "Worker.java", "Inheritance.java", "PlayerApp.java"));
 
   HashMap<String, String> subDirectoriesClass = new HashMap<>();
   
@@ -24,9 +26,10 @@ public class SoftwareMethods {
       System.out.println("\n+-------------------------------------+");
       System.out.println("|    Códigos feitos em sala de aula   |");
       System.out.println("+-------------------------------------+");
-      for (int iterator = 0; iterator < this.codeClassNames.length; iterator++) {
-        System.out.printf("| %d - %s \n", iterator + 1, this.codeClassNames[iterator]);
+      for (int iterator = 0; iterator < this.codeClassNames.size(); iterator++) {
+        System.out.printf("| %d - %s \n", iterator + 1, this.codeClassNames.get(iterator));
       }
+      System.out.print("| 0 - Voltar \n");
 
       System.out.print("\n> Digite o número da opção desejada: ");
 
@@ -34,20 +37,23 @@ public class SoftwareMethods {
       System.out.println("\n+-------------------------------------+");
       System.out.println("|   Códigos de exercícios propostos   |");
       System.out.println("|-------------------------------------|");
-      for (int iterator =0; iterator < this.codeExercisesNames.length; iterator++) {
-        System.out.printf("| %d - %s \n", iterator + 1, this.codeExercisesNames[iterator]);
+      for (int iterator =0; iterator < this.codeExercisesNames.size(); iterator++) {
+        System.out.printf("| %d - %s \n", iterator + 1, this.codeExercisesNames.get(iterator));
       };
+      System.out.print("| 0 - Voltar \n");
 
       System.out.print("\n> Digite o número da opção desejada: ");
     }
   }
 
   public void showCodeInformation(String codeName, int menuType) {
+    
     String codeDirectory = codeName;
     subDirectoriesClass.put("AlunoApp.java", "MediaAluno/");
     subDirectoriesClass.put("BankAccountApp.java", "Bank/");
     subDirectoriesClass.put("ExemploInput.java", "InputExample/");
     subDirectoriesClass.put("OrderApp.java", "Orders/");
+    subDirectoriesClass.put("Imc.java", "ImcApp/");
 
     if (subDirectoriesClass.containsKey(codeName)) {
       codeDirectory = subDirectoriesClass.get(codeName) + codeName;
